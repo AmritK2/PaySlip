@@ -7,8 +7,16 @@ namespace Payslip
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void NoClue()
         {
+            string fname = "Me";                    //inputs
+            string lname = "Me";
+
+            string name = fname + lname;
+
+            Assert.AreEqual(3, name);
         }
+
+
     }
 }
