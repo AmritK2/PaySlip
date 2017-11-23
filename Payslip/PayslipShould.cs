@@ -4,9 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Payslip
+namespace Calculator
 {
     class PayslipShould
     {
+        /*
+        [TestMethod]
+        public void GiveBackAPayslip()
+        {
+            string payslip = "abc";
+            Payslip ps = new Payslip();
+        }
+        */
     }
 }

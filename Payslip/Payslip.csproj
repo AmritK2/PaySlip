@@ -48,8 +48,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Example.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CalculatorShould.cs" />
+    <Compile Include="PayCalculator.cs" />
+    <Compile Include="Payslip.cs" />
+    <Compile Include="PayslipShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
