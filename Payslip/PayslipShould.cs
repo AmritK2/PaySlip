@@ -19,7 +19,7 @@ namespace Calculator
             EmployeeInfo name = payslip.SplitTheInput(userInput);
 
             //Assert.AreEqual("David Rudd", name.ToString());
-            Assert.AreEqual("600050", name.Salary);
+            Assert.AreEqual("01 March- 31 March", name.Period);
         }
 
         [TestMethod]

@@ -23,7 +23,8 @@ namespace Calculator
             empInfo.FirstName = values[0];
             empInfo.LastName = values[1];
             empInfo.Salary = values[2];
-
+            empInfo.SuperRate = values[3];
+            empInfo.Period = values[4];
             //GetFullName(empInfo.FirstName, empInfo.LastName);
             return empInfo;
         }
