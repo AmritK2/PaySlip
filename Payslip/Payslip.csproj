@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorShould.cs" />
+    <Compile Include="EmployeeInfo.cs" />
     <Compile Include="PayCalculator.cs" />
     <Compile Include="Payslip.cs" />
     <Compile Include="PayslipShould.cs" />

@@ -6,7 +6,6 @@ namespace Calculator
     {
         internal string FindPeriod()
         {
-
            throw new NotImplementedException();
         }
 
@@ -14,7 +13,6 @@ namespace Calculator
         {
             int result = salary / 12;
             return result;
-            //throw new NotImplementedException();
         }
 
         internal double calculateIncomeTax(double income)
@@ -48,23 +46,26 @@ namespace Calculator
                 result = (0.45 * Income) + 54547;
             }
             
-            return result;
+            return Math.Round(result);
+        }
+
+        internal string calculatePayPeriod(string period)
+        {
+            return period;
             //throw new NotImplementedException();
         }
 
         internal double calculateNetIncome(double gIncome, double tIncome)
         {
-            double incomeNet = gIncome - tIncome;
-
-            return incomeNet;
-            //throw new NotImplementedException();
+            return Math.Round(gIncome - tIncome);
+            //double incomeNet = gIncome - tIncome;
+           // return incomeNet;
         }
 
         internal double calculateSuperRate(double rate, double netIncome)
         {
-            double result = netIncome * (rate / 100);
-
-            return result;
+            //double result = netIncome * (rate / 100);
+            return Math.Round(netIncome * (rate / 100));
         }
     }
 }

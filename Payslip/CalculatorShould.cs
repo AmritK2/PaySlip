@@ -7,106 +7,57 @@ namespace Calculator
     public class CalculatorShould
     {
         [TestMethod]
-        public void PayPeriod()
+        public void GivePayPeriod()
         {
-            string period = "March";
-            //PayCalculator calculator = new PayCalculator();
+            string period = "01 March to 31 March";
+            PayCalculator calculator = new PayCalculator();
+            string payPeriod = calculator.calculatePayPeriod(period);
 
-            Assert.AreEqual("March", period);
+            Assert.AreEqual("01 March to 31 March", payPeriod);
         }
 
         [TestMethod]
-        public void GIncome()
+        public void GiveGrossIncome()
         {
             int salary = 12000;
-            PayCalculator Income = new PayCalculator();
-            int gIncome = Income.calculateGrossIncome(salary);
+            PayCalculator calculator = new PayCalculator();  //calc
+            int gIncome = calculator.calculateGrossIncome(salary);
 
-            Assert.AreEqual(1000,gIncome);
+            Assert.AreEqual(1000, gIncome);
         }
 
-        /*
         [TestMethod]
-        public void TestGIncome()
-        {
-            int salary = 18000;
-            PayCalculator Income = new PayCalculator();
-            int gIncome = Income.calculateGrossIncome(salary);
-
-            Assert.AreEqual(1500, gIncome); //how will the actual result change based on user input
-        }
-        */
-
-        [TestMethod]
-        public void TIncome()
+        public void GiveTaxIncome()
         {
             double income = 18300;
-            PayCalculator tax = new PayCalculator();
-            double tIncome = tax.calculateIncomeTax(income);
+            PayCalculator calculator = new PayCalculator();
+            double tIncome = calculator.calculateIncomeTax(income);
 
             Assert.AreEqual(19, tIncome);
         }
         
-        /*
         [TestMethod]
-        public void TestTIncome()
-        {
-            double income = 150000;
-            PayCalculator tax = new PayCalculator();
-            double tIncome = tax.calculateIncomeTax(income);
-
-            Assert.AreEqual(43447, tIncome);
-        }
-        */
-
-        [TestMethod]
-        public void NIncome()
+        public void GiveNetIncome()
         {
             double gIncome = 1000;
             double tIncome = 100;
 
-            PayCalculator netIncome = new PayCalculator();
-            double nIncome = netIncome.calculateNetIncome(gIncome,tIncome);
+            PayCalculator calculator = new PayCalculator();
+            double nIncome = calculator.calculateNetIncome(gIncome,tIncome);
 
             Assert.AreEqual(900, nIncome);
         }
 
-        /*
         [TestMethod]
-        public void TestNIncome()
-        {
-            double gIncome = 2000;
-            double tIncome = 500;
-
-            PayCalculator netIncome = new PayCalculator();
-            double nIncome = netIncome.calculateNetIncome(gIncome, tIncome);
-
-            Assert.AreEqual(1500, nIncome);
-        }
-        */
-
-        [TestMethod]
-        public void Super()
+        public void GiveSuper()
         {
             double rate = 9;
             double netIncome = 5000;
             
-            PayCalculator super = new PayCalculator();
-            double superRate = super.calculateSuperRate(rate, netIncome);
+            PayCalculator calculator = new PayCalculator();
+            double superRate = calculator.calculateSuperRate(rate, netIncome);
 
             Assert.AreEqual(450, superRate);
-        }
-
-        [TestMethod]
-        public void TestSuper()
-        {
-            double rate = 7;
-            double netIncome = 6000;
-
-            PayCalculator super = new PayCalculator();
-            double superRate = super.calculateSuperRate(rate, netIncome);
-
-            Assert.AreEqual(420, superRate);
         }
     }
 }
